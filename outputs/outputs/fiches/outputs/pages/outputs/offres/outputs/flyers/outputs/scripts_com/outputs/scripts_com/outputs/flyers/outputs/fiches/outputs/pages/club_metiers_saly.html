@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Club des Métiers du Terrain · Saly</title>
+  <meta name="description" content="DIGIYLYFE — Club des Métiers du Terrain à Saly. Fiches, QR, WhatsApp, contact direct, sans commission sur le travail du pro." />
+
+  <style>
+    :root {
+      --bg: #080808;
+      --card: #121212;
+      --soft: #1b1b1b;
+      --gold: #d8a84f;
+      --text: #f6f1e8;
+      --muted: #c9b98f;
+      --line: rgba(216, 168, 79, 0.32);
+      --white-soft: rgba(255,255,255,0.72);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(216,168,79,0.18), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    header {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 34px 18px;
+      text-align: center;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 940px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 42px 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    }
+
+    .badge {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: var(--muted);
+      margin-bottom: 22px;
+      font-size: 0.92rem;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 8vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      color: var(--gold);
+    }
+
+    .subtitle {
+      margin: 22px auto 0;
+      max-width: 720px;
+      font-size: clamp(1.08rem, 3vw, 1.45rem);
+      color: var(--text);
+    }
+
+    .phrase {
+      margin: 26px auto 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 170px;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255,255,255,0.035);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 18px 56px;
+    }
+
+    section {
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(18,18,18,0.85);
+      padding: 24px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-size: 1.45rem;
+    }
+
+    p {
+      color: var(--white-soft);
+      margin: 10px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border: 1px solid rgba(216,168,79,0.22);
+      background: var(--soft);
+      border-radius: 18px;
+      padding: 18px;
+      min-height: 128px;
+    }
+
+    .card strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+    }
+
+    .card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .step {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #111;
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    .quote {
+      font-size: 1.35rem;
+      color: var(--text);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      color: rgba(255,255,255,0.55);
+      padding: 24px 18px 40px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 34px 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <div class="badge">DIGIYLYFE · Saly · Petite Côte</div>
+
+```
+  <h1>Club des Métiers du Terrain</h1>
+
+  <p class="subtitle">
+    Une route simple pour trouver un chauffeur, un artisan, un logement,
+    un commerce ou un service local à Saly.
+  </p>
+
+  <p class="phrase">
+    Le client scanne, parle ou écrit son besoin. DIGIY oriente vers les bonnes fiches.
+    Le professionnel garde son contact, son travail et son paiement.
+  </p>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="https://digiylyfe.com/" target="_blank" rel="noopener">
+      Ouvrir DIGIYLYFE
+    </a>
+    <a class="btn btn-secondary" href="#pro">
+      Je suis professionnel
+    </a>
+  </div>
+</div>
+```
+
+  </header>
+
+  <main>
+    <section>
+      <h2>Pour les clients</h2>
+      <p>
+        Tu cherches un pro à Saly ? Tu peux scanner un QR, écrire ou dire ton besoin,
+        puis accéder à une fiche claire avec contact direct.
+      </p>
+
+```
+  <div class="grid">
+    <div class="card">
+      <strong>🚗 Chauffeur</strong>
+      <span>AIBD, Dakar, Saly, trajets locaux.</span>
+    </div>
+    <div class="card">
+      <strong>🏗️ Artisan</strong>
+      <span>Plombier, maçon, électricien, service maison.</span>
+    </div>
+    <div class="card">
+      <strong>🏠 Location</strong>
+      <span>Logement, chambre, appartement, séjour Petite Côte.</span>
+    </div>
+    <div class="card">
+      <strong>🛍️ Commerce</strong>
+      <span>Boutique, produits, vente locale.</span>
+    </div>
+    <div class="card">
+      <strong>💇 Soins & beauté</strong>
+      <span>Coiffure, esthétique, services à domicile.</span>
+    </div>
+    <div class="card">
+      <strong>🤝 Services</strong>
+      <span>Petits métiers, aide terrain, missions locales.</span>
+    </div>
+  </div>
+</section>
+
+<section id="pro">
+  <h2>Pour les professionnels</h2>
+  <p>
+    DIGIYLYFE aide le professionnel à être visible simplement :
+    fiche, lien partageable, QR, WhatsApp et présence dans son métier et sa zone.
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      Le pro présente son métier, sa zone et ses services.
+    </div>
+    <div class="step">
+      DIGIY prépare une fiche claire, simple et partageable.
+    </div>
+    <div class="step">
+      Le QR et le lien peuvent être envoyés, imprimés ou montrés sur téléphone.
+    </div>
+    <div class="step">
+      Le client contacte directement le professionnel.
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>La promesse</h2>
+  <p>
+    DIGIYLYFE ne prend pas de commission sur le travail du professionnel.
+    Le paiement reste direct au pro. Le terrain garde la main.
+  </p>
+  <p class="quote">
+    Tu travailles déjà. DIGIY t’aide à être trouvé.
+  </p>
+</section>
+
+<section>
+  <h2>Phrase de route</h2>
+  <p>
+    DeerFlow prépare les supports dans l’atelier.
+    DIGIY valide.
+    Le terrain décide.
+  </p>
+</section>
+```
+
+  </main>
+
+  <footer>
+    DIGIYLYFE — Le Club des Métiers du Terrain · Saly
+  </footer>
+</body>
+</html>
