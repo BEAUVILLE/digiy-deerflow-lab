@@ -1,0 +1,14 @@
+{
+  "modules": [
+    { "code": "POS", "nom": "DIGIY POS", "porte": "Mon commerce", "usage": "caisse, stock, ventes" },
+    { "code": "DRIVER", "nom": "DIGIY DRIVER", "porte": "Je conduis", "usage": "trajets, chauffeurs, AIBD, Saly, Dakar" },
+    { "code": "LOC", "nom": "DIGIY LOC", "porte": "Je loue", "usage": "logements, disponibilités, réservations" },
+    { "code": "PAY", "nom": "DIGIY PAY", "porte": "Mon argent", "usage": "entrées, sorties, preuves, solde" },
+    { "code": "MARKET", "nom": "DIGIY MARKET", "porte": "Je vends", "usage": "produits, boutiques, catalogue" },
+    { "code": "BUILD", "nom": "DIGIY BUILD", "porte": "Je propose mes services", "usage": "artisans, métiers, interventions" },
+    { "code": "JOBS", "nom": "DIGIY JOBS", "porte": "Je cherche du travail", "usage": "missions, offres, candidatures" },
+    { "code": "RESA", "nom": "DIGIY RESA", "porte": "Je réserve", "usage": "rendez-vous, tables, services" },
+    { "code": "EXPLORE", "nom": "DIGIY EXPLORE", "porte": "Je fais découvrir mon lieu", "usage": "lieux, tourisme, découvertes" },
+    { "code": "RESEAU", "nom": "DIGIY RÉSEAU", "porte": "Club et partenaires", "usage": "partenaires, sponsor, réseau" }
+  ]
+}
