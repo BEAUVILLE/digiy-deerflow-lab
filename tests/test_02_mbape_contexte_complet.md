@@ -300,3 +300,4 @@ DIGIY structure.
 DeerFlow assiste.
 Le pro valide.
 Le terrain décide.
+[test_02_mbape_contexte_complet.md](https://github.com/user-attachments/files/29058182/test_02_mbape_contexte_complet.md)
