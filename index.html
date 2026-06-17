@@ -18,9 +18,7 @@
       --line: rgba(216, 168, 79, 0.35);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -33,11 +31,7 @@
       padding: 24px;
     }
 
-    main {
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-    }
+    main { width: 100%; max-width: 980px; margin: 0 auto; }
 
     .hero {
       background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
@@ -84,18 +78,8 @@
       color: var(--muted);
     }
 
-    .line {
-      width: 80px;
-      height: 2px;
-      background: var(--gold);
-      margin: 32px auto;
-      border-radius: 999px;
-    }
-
-    .footer {
-      font-size: 0.95rem;
-      color: rgba(245, 241, 232, 0.68);
-    }
+    .line { width: 80px; height: 2px; background: var(--gold); margin: 32px auto; border-radius: 999px; }
+    .footer { font-size: 0.95rem; color: rgba(245, 241, 232, 0.68); }
 
     .notice {
       margin: 22px 0;
@@ -115,17 +99,8 @@
       background: rgba(17, 17, 17, 0.9);
     }
 
-    .section h3 {
-      margin: 0 0 14px;
-      color: var(--gold);
-      font-size: 1.25rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
+    .section h3 { margin: 0 0 14px; color: var(--gold); font-size: 1.25rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 
     a.card {
       display: block;
@@ -138,43 +113,15 @@
       transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
     }
 
-    a.card:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold);
-      background: rgba(216, 168, 79, 0.08);
-    }
-
-    .card strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 1rem;
-    }
-
-    .card span {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.45;
-    }
-
-    .small {
-      margin-top: 18px;
-      color: rgba(245, 241, 232, 0.58);
-      font-size: 0.9rem;
-      text-align: center;
-    }
+    a.card:hover { transform: translateY(-2px); border-color: var(--gold); background: rgba(216, 168, 79, 0.08); }
+    .card strong { display: block; margin-bottom: 6px; font-size: 1rem; }
+    .card span { color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+    .small { margin-top: 18px; color: rgba(245, 241, 232, 0.58); font-size: 0.9rem; text-align: center; }
 
     @media (max-width: 720px) {
-      body {
-        padding: 16px;
-      }
-
-      .hero {
-        padding: 34px 20px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      body { padding: 16px; }
+      .hero { padding: 34px 20px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -183,20 +130,11 @@
   <main>
     <section class="hero">
       <div class="badge">Atelier privé · DIGIYLYFE</div>
-
       <h1>DIGIY DeerFlow Lab</h1>
-
       <h2>Atelier privé de préparation DIGIYLYFE</h2>
-
       <div class="line"></div>
-
-      <p class="phrase">
-        DeerFlow prépare · DIGIY valide · Le terrain décide
-      </p>
-
-      <p class="footer">
-        Liens actifs uniquement · Zéro porte cassée
-      </p>
+      <p class="phrase">DeerFlow prépare · DIGIY valide · Le terrain décide</p>
+      <p class="footer">Liens actifs uniquement · Zéro porte cassée</p>
     </section>
 
     <div class="notice">
@@ -212,7 +150,6 @@
           <strong>README.md</strong>
           <span>Présentation générale du DIGIY DeerFlow Lab.</span>
         </a>
-
         <a class="card" href="./doctrine-digiy-deerflow.md" target="_blank" rel="noopener">
           <strong>Doctrine DIGIY DeerFlow</strong>
           <span>Règles du Lab : DeerFlow prépare, DIGIY valide, le terrain décide.</span>
@@ -227,7 +164,6 @@
           <strong>Fiche métier terrain</strong>
           <span>Skill pour structurer une présentation abonné sans inventer de données.</span>
         </a>
-
         <a class="card" href="./skills/pack_qr_commercial.md" target="_blank" rel="noopener">
           <strong>Pack QR commercial</strong>
           <span>Skill pour préparer textes QR, WhatsApp et pitchs terrain.</span>
@@ -242,7 +178,6 @@
           <strong>Modules DIGIY</strong>
           <span>Configuration des modules : POS, DRIVER, LOC, PAY, MARKET, BUILD, JOBS, RESA, EXPLORE.</span>
         </a>
-
         <a class="card" href="./inputs/exemples_terrain.md" target="_blank" rel="noopener">
           <strong>Exemples terrain</strong>
           <span>Demandes clients, objections et formulations utiles.</span>
@@ -267,20 +202,21 @@
           <strong>Checklist validation</strong>
           <span>Contrôle terrain, données pro, photos URL, sécurité et module.</span>
         </a>
-
         <a class="card" href="./tests/test_mbape_presentation_abonne.md" target="_blank" rel="noopener">
           <strong>Test 01 MBAPÉ</strong>
           <span>Premier test de présentation abonné.</span>
         </a>
-
         <a class="card" href="./tests/resultat_test_mbape_presentation_abonne.md" target="_blank" rel="noopener">
           <strong>Résultat test 01 MBAPÉ</strong>
           <span>Résultat ou brouillon de verdict du premier test.</span>
         </a>
-
         <a class="card" href="./tests/test_02_mbape_contexte_complet.md" target="_blank" rel="noopener">
           <strong>Test 02 MBAPÉ · contexte complet</strong>
           <span>Vrai test avec doctrine DIGIY, ton attendu, interdits et critères de victoire.</span>
+        </a>
+        <a class="card" href="./tests/resultat_test_02_mbape_contexte_complet.md" target="_blank" rel="noopener">
+          <strong>Résultat Test 02 MBAPÉ</strong>
+          <span>Fichier de verdict du vrai match MBAPÉ avec contexte complet.</span>
         </a>
       </div>
     </section>
