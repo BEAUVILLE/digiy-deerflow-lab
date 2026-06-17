@@ -1,3 +1,121 @@
-DIGIY DeerFlow Lab
-Atelier privé de préparation DIGIYLYFE
-DeerFlow prépare · DIGIY valide · Le terrain décide
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DIGIY DeerFlow Lab</title>
+  <meta name="description" content="DIGIY DeerFlow Lab — Atelier privé de préparation DIGIYLYFE. DeerFlow prépare, DIGIY valide, le terrain décide." />
+
+  <style>
+    :root {
+      --bg: #080808;
+      --card: #111111;
+      --text: #f5f1e8;
+      --muted: #c9b98f;
+      --gold: #d8a84f;
+      --line: rgba(216, 168, 79, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(216, 168, 79, 0.18), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 760px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 42px 28px;
+      text-align: center;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 8vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--gold);
+    }
+
+    h2 {
+      margin: 18px 0 0;
+      font-size: clamp(1.1rem, 4vw, 1.7rem);
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .phrase {
+      margin: 30px auto 0;
+      max-width: 620px;
+      font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .line {
+      width: 80px;
+      height: 2px;
+      background: var(--gold);
+      margin: 32px auto;
+      border-radius: 999px;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      color: rgba(245, 241, 232, 0.62);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="badge">Atelier privé · DIGIYLYFE</div>
+
+    <h1>DIGIY DeerFlow Lab</h1>
+
+    <h2>Atelier privé de préparation DIGIYLYFE</h2>
+
+    <div class="line"></div>
+
+    <p class="phrase">
+      DeerFlow prépare · DIGIY valide · Le terrain décide
+    </p>
+
+    <p class="footer">
+      Fiches · QR · offres · scripts · dossiers terrain
+    </p>
+  </main>
+</body>
+</html>
+```
