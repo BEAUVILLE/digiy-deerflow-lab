@@ -12,10 +12,12 @@
     :root {
       --bg: #080808;
       --card: #111111;
+      --soft: #171717;
       --text: #f5f1e8;
       --muted: #c9b98f;
       --gold: #d8a84f;
       --line: rgba(216, 168, 79, 0.35);
+      --danger: #ffcf7a;
     }
 
     * {
@@ -30,15 +32,16 @@
         var(--bg);
       color: var(--text);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       padding: 24px;
     }
 
     main {
       width: 100%;
-      max-width: 760px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero {
       background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
       border: 1px solid var(--line);
       border-radius: 28px;
@@ -92,30 +95,234 @@
     }
 
     .footer {
+      font-size: 0.95rem;
+      color: rgba(245, 241, 232, 0.68);
+    }
+
+    .notice {
+      margin: 22px 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(216, 168, 79, 0.08);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(17, 17, 17, 0.9);
+    }
+
+    .section h3 {
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-size: 1.25rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    a.card {
+      display: block;
+      text-decoration: none;
+      border: 1px solid rgba(216, 168, 79, 0.24);
+      border-radius: 16px;
+      padding: 16px;
+      background: var(--soft);
+      color: var(--text);
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+      background: rgba(216, 168, 79, 0.08);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .small {
+      margin-top: 18px;
+      color: rgba(245, 241, 232, 0.58);
       font-size: 0.9rem;
-      color: rgba(245, 241, 232, 0.62);
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 16px;
+      }
+
+      .hero {
+        padding: 34px 20px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div class="badge">Atelier privé · DIGIYLYFE</div>
+    <section class="hero">
+      <div class="badge">Atelier privé · DIGIYLYFE</div>
 
-    <h1>DIGIY DeerFlow Lab</h1>
+      <h1>DIGIY DeerFlow Lab</h1>
 
-    <h2>Atelier privé de préparation DIGIYLYFE</h2>
+      <h2>Atelier privé de préparation DIGIYLYFE</h2>
 
-    <div class="line"></div>
+      <div class="line"></div>
 
-    <p class="phrase">
-      DeerFlow prépare · DIGIY valide · Le terrain décide
-    </p>
+      <p class="phrase">
+        DeerFlow prépare · DIGIY valide · Le terrain décide
+      </p>
 
-    <p class="footer">
-      Fiches · QR · offres · scripts · dossiers terrain
+      <p class="footer">
+        Fiches · QR · offres · scripts · dossiers terrain
+      </p>
+    </section>
+
+    <div class="notice">
+      Cette page sert de porte de lecture du dépôt.  
+      Les fichiers restent dans GitHub, mais tu peux les ouvrir directement depuis ici.
+      Si un lien affiche 404, c’est que le fichier n’existe pas encore ou que son nom n’est pas exactement le même dans le dépôt.
+    </div>
+
+    <section class="section">
+      <h3>📌 Socle du Lab</h3>
+      <div class="grid">
+        <a class="card" href="./README.md" target="_blank" rel="noopener">
+          <strong>README.md</strong>
+          <span>Présentation générale du DIGIY DeerFlow Lab.</span>
+        </a>
+
+        <a class="card" href="./doctrine-digiy-deerflow.md" target="_blank" rel="noopener">
+          <strong>Doctrine DIGIY DeerFlow</strong>
+          <span>Règles du Lab : DeerFlow prépare, DIGIY valide, le terrain décide.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>🧠 Skills</h3>
+      <div class="grid">
+        <a class="card" href="./skills/fiche_metier_terrain.md" target="_blank" rel="noopener">
+          <strong>Fiche métier terrain</strong>
+          <span>Skill pour structurer une présentation abonné sans inventer de données.</span>
+        </a>
+
+        <a class="card" href="./skills/pack_qr_commercial.md" target="_blank" rel="noopener">
+          <strong>Pack QR commercial</strong>
+          <span>Skill pour préparer textes QR, WhatsApp et pitchs terrain.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>📥 Inputs</h3>
+      <div class="grid">
+        <a class="card" href="./inputs/modules_digiy.json" target="_blank" rel="noopener">
+          <strong>Modules DIGIY</strong>
+          <span>Configuration des modules : POS, DRIVER, LOC, PAY, MARKET, BUILD, JOBS, RESA, EXPLORE.</span>
+        </a>
+
+        <a class="card" href="./inputs/exemples_terrain.md" target="_blank" rel="noopener">
+          <strong>Exemples terrain</strong>
+          <span>Demandes clients, objections et formulations utiles.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>📤 Outputs · Fiches</h3>
+      <div class="grid">
+        <a class="card" href="./outputs/fiches/fiche_modele_pro_saly.md" target="_blank" rel="noopener">
+          <strong>Fiche modèle pro Saly</strong>
+          <span>Modèle de fiche à remplir par l’abonné/professionnel.</span>
+        </a>
+
+        <a class="card" href="./outputs/fiches/exemple_helage_plombier_saly.md" target="_blank" rel="noopener">
+          <strong>Exemple Helage Plombier</strong>
+          <span>Exemple atelier avec données à valider par le professionnel.</span>
+        </a>
+
+        <a class="card" href="./outputs/fiches/exemple_chauffeur_aibd_saly.md" target="_blank" rel="noopener">
+          <strong>Exemple chauffeur AIBD</strong>
+          <span>Exemple atelier pour trajet Saly, AIBD, Dakar.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>📤 Outputs · Offres, QR, scripts</h3>
+      <div class="grid">
+        <a class="card" href="./outputs/offres/club_metiers_saly_offre.md" target="_blank" rel="noopener">
+          <strong>Offre Club des Métiers Saly</strong>
+          <span>Offre terrain souple sans prix bloquant.</span>
+        </a>
+
+        <a class="card" href="./outputs/scripts_com/message_whatsapp_prospection_saly.md" target="_blank" rel="noopener">
+          <strong>Message WhatsApp prospection</strong>
+          <span>Message simple pour présenter DIGIYLYFE aux pros.</span>
+        </a>
+
+        <a class="card" href="./outputs/flyers/texte_qr_club_metiers_saly.md" target="_blank" rel="noopener">
+          <strong>Texte QR Club des Métiers</strong>
+          <span>Textes courts pour autocollant, affiche et pitch oral.</span>
+        </a>
+
+        <a class="card" href="./outputs/pages/club_metiers_saly.html" target="_blank" rel="noopener">
+          <strong>Page Club des Métiers Saly</strong>
+          <span>Page HTML de démonstration pour le pack terrain.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>✅ Tests</h3>
+      <div class="grid">
+        <a class="card" href="./tests/checklist_validation.md" target="_blank" rel="noopener">
+          <strong>Checklist validation</strong>
+          <span>Contrôle terrain, données pro, photos URL, sécurité et module.</span>
+        </a>
+
+        <a class="card" href="./tests/test_mbape_presentation_abonne.md" target="_blank" rel="noopener">
+          <strong>Test MBAPÉ présentation abonné</strong>
+          <span>Test pour vérifier si DeerFlow améliore vraiment une présentation pro.</span>
+        </a>
+
+        <a class="card" href="./tests/resultat_test_mbape_presentation_abonne.md" target="_blank" rel="noopener">
+          <strong>Résultat test MBAPÉ</strong>
+          <span>Verdict honnête : marqué, pas décisif, trop risqué ou non exécuté.</span>
+        </a>
+      </div>
+    </section>
+
+    <p class="small">
+      Règle finale : l’abonné fournit ses données · DIGIY structure · DeerFlow assiste · le pro valide · le terrain décide.
     </p>
   </main>
 </body>
 </html>
+```
+
 ```
