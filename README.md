@@ -1,12 +1,12 @@
 # DIGIY DeerFlow Lab
 
-**DIGIY DeerFlow Lab** est un atelier privé pour préparer les contenus, pages, fiches, offres et scripts terrain de DIGIYLYFE.
+**DIGIY DeerFlow Lab** est un atelier privé pour préparer, ranger, vérifier et améliorer les supports terrain de DIGIYLYFE.
 
-Ce dépôt n’est pas la vitrine publique.  
-Ce dépôt n’est pas la production.  
+Ce dépôt n’est pas la vitrine publique.
+Ce dépôt n’est pas la production.
 Ce dépôt n’est pas le cerveau qui décide à la place du terrain.
 
-Il sert à préparer les cartouches, proprement, avant validation humaine.
+Il sert à préparer les cartouches proprement, avant validation humaine.
 
 ---
 
@@ -21,14 +21,68 @@ voix → intention → fiche → QR → contact direct → paiement direct
 DeerFlow reste en arrière-atelier :
 
 ```txt
-idée → recherche → brouillon → fiche/page/offre → validation humaine → mise en ligne maîtrisée
+idée → brouillon → structuration → vérification → support terrain → validation humaine
 ```
 
 La règle est claire :
 
-> DeerFlow fabrique dans l’atelier.  
-> DIGIY valide.  
+> DeerFlow prépare dans l’atelier.
+> DIGIY structure et valide.
 > Le terrain décide.
+
+---
+
+## Doctrine centrale
+
+Dans DIGIYLYFE, l’abonné ou le professionnel renseigne ses propres données.
+
+Pourquoi ?
+
+Parce que lui seul connaît réellement :
+
+* son nom public ;
+* son métier ;
+* ses zones d’intervention ;
+* ses services ;
+* ses horaires ;
+* son contact public ;
+* ses photos ;
+* ses limites ;
+* ses disponibilités ;
+* sa manière de travailler.
+
+DeerFlow ne doit pas inventer une fiche à la place du pro.
+
+DeerFlow peut seulement aider à :
+
+* structurer les informations ;
+* clarifier un texte ;
+* repérer les oublis ;
+* préparer un message WhatsApp ;
+* préparer une phrase QR ;
+* préparer un pitch court ;
+* préparer une checklist ;
+* mettre en forme un support terrain.
+
+---
+
+## Règle photos
+
+Les photos doivent être renseignées uniquement sous forme d’URL.
+
+Aucune photo ne doit être stockée directement dans le Lab.
+
+Format recommandé :
+
+```txt
+photo_url: "https://..."
+gallery_urls:
+- "https://..."
+- "https://..."
+- "https://..."
+```
+
+Les URLs doivent être publiques, propres, accessibles et validées par le professionnel.
 
 ---
 
@@ -37,10 +91,10 @@ La règle est claire :
 Le Lab sert à produire rapidement :
 
 ```txt
-fiches métiers
-pages HTML
-README GitHub
-offres commerciales
+modèles de fiches métiers
+checklists de validation
+pages HTML de démonstration
+offres commerciales souples
 messages WhatsApp
 scripts terrain
 packs QR
@@ -59,7 +113,7 @@ Objectif : préparer un pack simple pour recruter 10 professionnels terrain à S
 
 ## Ce que le Lab peut faire
 
-### 1. Préparer une fiche métier
+### 1. Préparer un modèle de fiche métier
 
 Exemples :
 
@@ -72,18 +126,18 @@ soins beauté à domicile
 location appartement Petite Côte
 ```
 
+Le Lab ne remplace pas la saisie du professionnel.
+
 Sortie attendue :
 
 ```txt
-nom public
-métier
-zone
-phrase courte
-services proposés
-bouton WhatsApp
-texte de demande préparée
+structure de fiche
+champs à remplir
+règles de validation
+message WhatsApp préparé
 phrase QR
-mini pitch oral
+pitch oral
+contrôle sécurité
 ```
 
 ### 2. Préparer une page HTML
@@ -94,9 +148,9 @@ Exemples :
 
 ```txt
 club-metiers-saly.html
-fiche-plombier-saly.html
+fiche-modele-artisan.html
 qr-chauffeur-aibd.html
-page-offre-abonnement.html
+page-offre-terrain.html
 ```
 
 ### 3. Préparer un message WhatsApp
@@ -118,7 +172,22 @@ Exemple :
 ```txt
 Bonjour grand, je vous montre une chose simple.
 Le client scanne le QR, il voit votre fiche, il vous écrit directement.
-Pas de commission. Pas d’application compliquée. Vous gardez la main.
+Pas de commission sur votre travail. Pas d’application compliquée. Vous gardez la main.
+```
+
+### 5. Préparer une checklist
+
+Le Lab peut aider à vérifier :
+
+```txt
+données validées par le pro
+contact public validé
+photos en URL seulement
+lien testé
+QR testé
+texte clair
+pas de donnée sensible
+pas de promesse excessive
 ```
 
 ---
@@ -131,6 +200,9 @@ ne jamais publier seul
 ne jamais utiliser les clés Supabase privées
 ne jamais stocker de données clients sensibles
 ne jamais exposer les téléphones complets dans un fichier public non validé
+ne jamais publier un contact sans accord du professionnel
+ne jamais stocker les photos directement dans le dépôt
+ne jamais inventer les données d’un pro
 ne jamais remplacer la décision humaine
 ne jamais complexifier la vitrine DIGIYLYFE
 ```
@@ -144,6 +216,7 @@ Si une idée rend la rue plus compliquée, elle sort du Lab.
 ```txt
 digiy-deerflow-lab/
 ├── README.md
+├── index.html
 ├── doctrine-digiy-deerflow.md
 ├── skills/
 │   ├── fiche_metier_terrain.md
@@ -158,13 +231,14 @@ digiy-deerflow-lab/
 │   ├── flyers/
 │   └── scripts_com/
 └── tests/
+    └── checklist_validation.md
 ```
 
 ---
 
-## Doctrine simple
+## Doctrine d’écriture
 
-DIGIYLYFE ne vend pas du rêve abstrait.  
+DIGIYLYFE ne vend pas du rêve abstrait.
 DIGIYLYFE donne une route visible aux professionnels du terrain.
 
 Les mots doivent rester :
@@ -188,6 +262,8 @@ phrases trop longues
 langage froid de machine
 survente
 copie des plateformes lourdes
+données inventées
+prix affichés trop tôt
 ```
 
 ---
@@ -221,9 +297,11 @@ Livrables à produire :
 3. une fiche modèle chauffeur
 4. un message WhatsApp de prospection
 5. un texte QR autocollant
-6. une mini offre abonnement 19 900 / 20 000 FCFA
+6. une offre terrain souple sans prix bloquant
 7. un script oral de démonstration
 8. un mini dossier partenaire
+9. une checklist de validation pro
+10. un modèle de données avec photo_url et gallery_urls
 ```
 
 ---
@@ -241,9 +319,31 @@ Est-ce que le contact direct est clair ?
 Est-ce que DIGIY garde le pro maître de son business ?
 Est-ce que cela évite la commission ?
 Est-ce que cela peut être imprimé en QR ?
+Est-ce que les données viennent bien du pro ?
+Est-ce que les photos sont en URL seulement ?
+Est-ce que le lien fonctionne ?
+Est-ce que le QR fonctionne sur téléphone ?
 ```
 
 Si la réponse est non, on simplifie.
+
+---
+
+## Règle de publication
+
+Aucune sortie ne part sur le terrain sans contrôle :
+
+```txt
+contrôle terrain
+contrôle DIGIYLYFE
+contrôle données pro
+contrôle photos URL
+contrôle sécurité
+contrôle action
+contrôle format
+contrôle module
+validation finale
+```
 
 ---
 
@@ -252,3 +352,13 @@ Si la réponse est non, on simplifie.
 > DIGIYLYFE transforme le sable du terrain en or digital.
 
 Le Lab existe pour servir cette route, pas pour la remplacer.
+
+---
+
+## Règle finale
+
+L’abonné fournit ses données.
+DIGIY structure.
+DeerFlow assiste.
+Le pro valide.
+Le terrain décide.
