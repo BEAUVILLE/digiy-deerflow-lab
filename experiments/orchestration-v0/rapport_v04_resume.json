@@ -1,0 +1,48 @@
+{
+  "mission_id": "DIGIY-ORCH-004",
+  "date": "2026-11-15",
+  "execution": "locale_python_et_node_sans_IA_externe",
+  "sources": "Copies locales des fichiers de la branche experiment/orchestration-v0-20261115 dont les SHA Git ont ete compares",
+  "fichiers": [
+    {
+      "fichier": "orchestration_reelle_v03.py",
+      "octets": 5286,
+      "sha256": "b2f2517cab5f6dcb3d4efecd646867384a70421b8212dd388bd1fa37b8a2fe44",
+      "syntaxe": "python_ok",
+      "secrets_detectes": false
+    },
+    {
+      "fichier": "test_verrou_preuves.mjs",
+      "octets": 1502,
+      "sha256": "34dc849c8fec4023c66c77fdda2a42fffbdfb2932e93cd054ae2bb45980617ec",
+      "syntaxe": "javascript_ok",
+      "secrets_detectes": false
+    },
+    {
+      "fichier": "mission_001.json",
+      "octets": 336,
+      "sha256": "3c39c6b65156b049c073f9a6dd52b56d847ebe1c025022cc19ca7e8a8d414f32",
+      "syntaxe": "json_ok",
+      "secrets_detectes": false
+    },
+    {
+      "fichier": "orchestrateur_v04.py",
+      "octets": 8249,
+      "sha256": "a11563ba65a39ed7e6b844d604ed85bdee4f0f4628f204586ac10f9ce3bb533f",
+      "syntaxe": "python_ok",
+      "secrets_detectes": false
+    }
+  ],
+  "tests_locaux": {
+    "python_v04": 18,
+    "python_v03_et_v04": 28,
+    "python_v0": 6,
+    "node_v01_v02": 22
+  },
+  "verdict": "a_verifier",
+  "validation_maitre_requise": true,
+  "publication": false,
+  "fusion": false,
+  "depense_supplementaire": 0,
+  "limites": "Controle statique et syntaxique seulement ; non une revue de securite exhaustive, ni test d'agents IA autonomes, ni test navigateur."
+}
