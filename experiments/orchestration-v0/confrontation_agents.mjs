@@ -37,11 +37,11 @@ function confrontation(d){
   return {sujet,verdict:status,statuts_des_deux:[a.statut,b.statut],preuves_declares:[...new Set([...a.preuve_ids,...b.preuve_ids])],validation_independante_des_preuves:false};
  });
  const conflict=synthese.some(x=>x.verdict==="discordance"),corr=synthese.some(x=>x.verdict==="a_corriger"),unk=synthese.some(x=>x.verdict==="inconnu");
- const verdict=conflict?"a_arbitrer":corr?"a_corriger":unk?"a_verifier":"conforme_sous_reserve";
+ const verdict=conflict?"a_arbitrer":corr?"a_corriger":"a_verifier"; // Sans preuves independantes, aucune conformite definitive.
  const simulation=d.sorties.some(x=>x.type_execution==="simulation_test");
  return {
   mission_id:d.mission_id,execution:simulation?"essai_sur_sorties_synthetiques":"sorties_modele_fournies_non_authentifiees",
-  avis:{verdict,sujets:synthese},realite_agents_ia_prouvee:false,
+  avis:{verdict,sujets:synthese},preuves_verifiees_independamment:false,realite_agents_ia_prouvee:false,
   avertissement:simulation?"Les paquets sont fictifs : aucun agent IA externe n'a ete execute.":"Les declarations de provenance de modeles ne prouvent ni independance ni execution reelle.",
   decisions:{publier:false,fusionner:false,payer:false,contacter:false,validation_du_maitre_requise:true}
  };
