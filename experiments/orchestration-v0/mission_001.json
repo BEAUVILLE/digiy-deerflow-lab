@@ -1,0 +1,10 @@
+{
+  "mission_id": "DIGIY-ORCH-001",
+  "date": "2026-11-15",
+  "type": "lecture_seule",
+  "but": "Coordonner trois controles de la PR 204 deja fusionnee, puis livrer un verdict sans action externe",
+  "cible": "BEAUVILLE/digiylyfe.com#204",
+  "actions_autorisees": [],
+  "cout_supplementaire_autorise": 0,
+  "validation_maitre": false
+}

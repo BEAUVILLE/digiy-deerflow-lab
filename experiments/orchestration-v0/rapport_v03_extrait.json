@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-15",
+  "mission": "DIGIY-ORCH-001",
+  "source": "Extrait manuel en lecture seule du bloc id=voix-adherents dans BEAUVILLE/digiylyfe.com index.html (main)",
+  "source_url": "https://github.com/BEAUVILLE/digiylyfe.com/blob/main/index.html",
+  "preuve_fichier_source_complet": false,
+  "execution": "Python local sur extrait de source réelle, sans réseau ni modèles IA",
+  "resultat": {
+    "eclaireur": {
+      "statut": "conforme",
+      "donnees_lues_octets": 1229,
+      "empreinte_sha256_extrait": "4196efd8420aef87b7a1135ee23aef1f1aa468c4a22ccd0ac20a045be2f76f67"
+    },
+    "technique": {
+      "statut": "impossible_a_verifier",
+      "liens_whatsapp": 3,
+      "summary": 1,
+      "anomalies_statiques": 0,
+      "limite": "Réception WhatsApp et interface iPhone non testées"
+    },
+    "langues": {
+      "statut": "a_corriger",
+      "elements_visibles_controles": 6,
+      "sans_marqueur_data_i18n": 6
+    },
+    "controleur": {
+      "verdict": "a_corriger",
+      "fusion": false,
+      "publication": false
+    }
+  },
+  "protection_vie_privee": "Extrait original conservé uniquement dans l'environnement de test, pas versé au dépôt; aucun numéro dans le rapport.",
+  "limites": "L'extrait prouve le fonctionnement de l'analyse statique sur cette section, non la correction des dix langues, non l'exécution de plusieurs modèles IA, non un test sur appareil."
+}

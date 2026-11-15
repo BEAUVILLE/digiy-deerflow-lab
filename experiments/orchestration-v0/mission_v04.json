@@ -1,0 +1,25 @@
+{
+  "mission_id": "DIGIY-ORCH-004",
+  "type": "lecture_seule",
+  "cout_supplementaire_autorise": 0,
+  "actions_autorisees": [],
+  "validation_maitre": false,
+  "cibles": [
+    {
+      "fichier": "orchestration_reelle_v03.py",
+      "controle": "base"
+    },
+    {
+      "fichier": "test_verrou_preuves.mjs",
+      "controle": "base"
+    },
+    {
+      "fichier": "mission_001.json",
+      "controle": "base"
+    },
+    {
+      "fichier": "orchestrateur_v04.py",
+      "controle": "base"
+    }
+  ]
+}

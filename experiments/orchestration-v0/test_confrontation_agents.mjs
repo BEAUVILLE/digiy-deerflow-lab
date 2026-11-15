@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { confrontation } from './confrontation_agents.mjs';
+const fixture=JSON.parse(fs.readFileSync(new URL('./deux_sorties_SYNTHETIQUES.json',import.meta.url),'utf8'));
+const clone=()=>structuredClone(fixture);
+test('Deux sorties: erreur de traduction, inconnue WhatsApp, zero publication',()=>{const r=confrontation(clone());assert.equal(r.avis.verdict,'a_corriger');assert.equal(r.realite_agents_ia_prouvee,false);assert.equal(r.decisions.publier,false);});
+test('Discordance est signalee',()=>{const o=clone();o.sorties[1].observations[0].statut='conforme';assert.equal(confrontation(o).avis.verdict,'a_arbitrer');});
+test('Incertitude reste visible',()=>{const o=clone();o.sorties.forEach(a=>a.observations[0].statut='conforme');assert.equal(confrontation(o).avis.verdict,'a_verifier');});
+test('Une seule sortie refusee',()=>{const o=clone();o.sorties.pop();assert.throws(()=>confrontation(o),/Deux sorties/);});
+test('Meme execution deux fois refusee',()=>{const o=clone();o.sorties[1].run_id=o.sorties[0].run_id;assert.throws(()=>confrontation(o),/Sessions/);});
+test('Demande d action refusee',()=>{const o=clone();o.sorties[0].actions_demandees=['publier'];assert.throws(()=>confrontation(o),/Actions/);});
+test('Depense refusee',()=>{const o=clone();o.sorties[1].cout_demande=1;assert.throws(()=>confrontation(o),/Actions/);});
+test('Fausse preuve refusee',()=>{const o=clone();o.sorties[0].observations[0].preuve_ids=['INVENTEE'];assert.throws(()=>confrontation(o),/Observation/);});
+test('Une observation manquante refusee',()=>{const o=clone();o.sorties[0].observations.pop();assert.throws(()=>confrontation(o),/Couverture/);});
+test('Source hors DIGIY refusee',()=>{const o=clone();o.sources.VOIX_HTML.url='https://example.com';assert.throws(()=>confrontation(o),/Source non autorisee/);});
+test('Simulation ne peut se faire passer pour un modele',()=>{const o=clone();o.sorties[0].modele='GPT-6';assert.throws(()=>confrontation(o),/Simulation/);});
+test('Rapport reproductible',()=>{assert.deepEqual(confrontation(clone()),confrontation(clone()));});

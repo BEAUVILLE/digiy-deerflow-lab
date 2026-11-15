@@ -1,0 +1,74 @@
+{
+  "mission_id": "DIGIY-ORCH-001",
+  "mode": "lecture_seule",
+  "budget_supplementaire": 0,
+  "autorisations": [],
+  "sujets": [
+    "I18N_VOIX",
+    "WHATSAPP_RECEPTION"
+  ],
+  "sources": {
+    "VOIX_HTML": {
+      "url": "https://github.com/BEAUVILLE/digiylyfe.com/blob/main/index.html",
+      "type": "source_de_code"
+    },
+    "PR204": {
+      "url": "https://github.com/BEAUVILLE/digiylyfe.com/pull/204",
+      "type": "pull_request"
+    }
+  },
+  "sorties": [
+    {
+      "agent_id": "analyseur",
+      "run_id": "TEST-ANALYSEUR-001",
+      "type_execution": "simulation_test",
+      "modele": null,
+      "actions_demandees": [],
+      "cout_demande": 0,
+      "observations": [
+        {
+          "sujet": "I18N_VOIX",
+          "statut": "a_corriger",
+          "preuve_ids": [
+            "VOIX_HTML"
+          ],
+          "note": "Les textes francais du nouveau bloc n'ont pas de marqueurs data-i18n dans l'extrait inspecte."
+        },
+        {
+          "sujet": "WHATSAPP_RECEPTION",
+          "statut": "inconnu",
+          "preuve_ids": [
+            "PR204"
+          ],
+          "note": "La reception reelle sur telephone n'a pas ete testee."
+        }
+      ]
+    },
+    {
+      "agent_id": "contre_auditeur",
+      "run_id": "TEST-CONTRE-001",
+      "type_execution": "simulation_test",
+      "modele": null,
+      "actions_demandees": [],
+      "cout_demande": 0,
+      "observations": [
+        {
+          "sujet": "I18N_VOIX",
+          "statut": "a_corriger",
+          "preuve_ids": [
+            "VOIX_HTML"
+          ],
+          "note": "Les libelles restent en francais sans cle de traduction."
+        },
+        {
+          "sujet": "WHATSAPP_RECEPTION",
+          "statut": "inconnu",
+          "preuve_ids": [
+            "PR204"
+          ],
+          "note": "Aucune preuve de reception WhatsApp cote utilisateur."
+        }
+      ]
+    }
+  ]
+}

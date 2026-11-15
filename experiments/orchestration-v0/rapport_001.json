@@ -1,0 +1,49 @@
+{
+  "mission_id": "DIGIY-ORCH-001",
+  "execution": "locale_deterministe_sans_agents_ia",
+  "postes": [
+    {
+      "role": "eclaireur",
+      "statut": "conforme",
+      "preuves": [
+        "PR #204 fusionnee",
+        "Un seul fichier modifie : index.html",
+        "https://github.com/BEAUVILLE/digiylyfe.com/pull/204"
+      ],
+      "points_a_verifier": []
+    },
+    {
+      "role": "technique",
+      "statut": "impossible_a_verifier",
+      "preuves": [
+        "HTML details natif et trois liens WhatsApp dans le code"
+      ],
+      "points_a_verifier": [
+        "Destination WhatsApp metier",
+        "Reception et parcours sur telephone"
+      ]
+    },
+    {
+      "role": "langues",
+      "statut": "a_corriger",
+      "preuves": [
+        "Libelles francais sans data-i18n dans le bloc"
+      ],
+      "points_a_verifier": [
+        "Examiner les 10 langues et le parcours utilisateur avant correctif"
+      ]
+    }
+  ],
+  "controleur": {
+    "statut": "a_corriger",
+    "motif": "Synthese des trois controles; les elements non verifies restent ouverts"
+  },
+  "garde_fou": {
+    "mise_en_production": false,
+    "publication": false,
+    "fusion": false,
+    "message_externe": false,
+    "depense": false,
+    "validation_humaine_requise": true
+  }
+}
