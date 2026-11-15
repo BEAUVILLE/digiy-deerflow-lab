@@ -1,0 +1,75 @@
+{
+  "mission": {
+    "mission_id": "DIGIY-ORCH-001",
+    "type": "lecture_seule",
+    "actions_autorisees": [],
+    "cout_supplementaire_autorise": 0,
+    "validation_maitre": false
+  },
+  "faits": {
+    "PR204_ETAT": {
+      "role": "eclaireur",
+      "source": "https://github.com/BEAUVILLE/digiylyfe.com/pull/204"
+    },
+    "PR204_FICHIER": {
+      "role": "eclaireur",
+      "source": "https://github.com/BEAUVILLE/digiylyfe.com/pull/204/files"
+    },
+    "HTML_DETAILS": {
+      "role": "technique",
+      "source": "https://github.com/BEAUVILLE/digiylyfe.com/blob/main/index.html"
+    },
+    "HTML_WHATSAPP_3": {
+      "role": "technique",
+      "source": "https://github.com/BEAUVILLE/digiylyfe.com/blob/main/index.html"
+    },
+    "HTML_I18N_ABSENT": {
+      "role": "langues",
+      "source": "https://github.com/BEAUVILLE/digiylyfe.com/blob/main/index.html"
+    }
+  },
+  "paquets": [
+    {
+      "mission_id": "DIGIY-ORCH-001",
+      "role": "eclaireur",
+      "recu_de": "maitre",
+      "statut": "conforme",
+      "preuves": [
+        "PR204_ETAT",
+        "PR204_FICHIER"
+      ],
+      "points_a_verifier": [],
+      "actions_demandees": [],
+      "depense_demandee": 0
+    },
+    {
+      "mission_id": "DIGIY-ORCH-001",
+      "role": "technique",
+      "recu_de": "eclaireur",
+      "statut": "impossible_a_verifier",
+      "preuves": [
+        "HTML_DETAILS",
+        "HTML_WHATSAPP_3"
+      ],
+      "points_a_verifier": [
+        "La reception WhatsApp et le parcours iPhone ne sont pas testes."
+      ],
+      "actions_demandees": [],
+      "depense_demandee": 0
+    },
+    {
+      "mission_id": "DIGIY-ORCH-001",
+      "role": "langues",
+      "recu_de": "technique",
+      "statut": "a_corriger",
+      "preuves": [
+        "HTML_I18N_ABSENT"
+      ],
+      "points_a_verifier": [
+        "Revue des traductions et du parcours dans les dix langues."
+      ],
+      "actions_demandees": [],
+      "depense_demandee": 0
+    }
+  ]
+}
