@@ -1,0 +1,19 @@
+{
+  "source": "Inspection GitHub en lecture seule le 15 novembre 2026. Ces faits ne se rafraichissent pas automatiquement.",
+  "pr": {
+    "url": "https://github.com/BEAUVILLE/digiylyfe.com/pull/204",
+    "merged": true,
+    "merged_at": "2026-11-15T13:58:39Z",
+    "changed_files": [
+      "index.html"
+    ]
+  },
+  "composant": {
+    "details_natif": true,
+    "liens_whatsapp": 3,
+    "destination_whatsapp_verifiee": null,
+    "test_reception_sur_telephone": null,
+    "libelles_traduits_dans_le_bloc": false,
+    "preuve_fichier": "https://github.com/BEAUVILLE/digiylyfe.com/blob/main/index.html"
+  }
+}
